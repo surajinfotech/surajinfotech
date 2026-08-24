@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Suraj Infotech Cyber Cafe & Computer Services - Online forms, PAN, printing, computer repair, government portals and digital services.">
+
+<!-- SECURITY UPDATE 1: Content Security Policy (CSP) Header -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' https: data:;">
+
+<title>Suraj Infotech | Cyber Cafe & Computer Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+:root{--blue:#075dcc;--deep:#063b88;--yellow:#ffc400;--green:#0acb62;--dark:#101828;--muted:#667085;--bg:#f5f8fc;--white:#fff;--shadow:0 8px 25px rgba(16,24,40,.09)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+
+body {
+    font-family: Poppins, Arial, sans-serif;
+    color: var(--dark);
+    line-height: 1.6;
+    background: linear-gradient(rgba(245, 248, 252, 0.92), rgba(245, 248, 252, 0.92)), 
+                url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1920&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+a{text-decoration:none}
+.container{width:min(1240px,95%);margin:auto}
+
+header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,0.98);backdrop-filter:blur(10px);box-shadow:0 2px 14px #0002}
+.nav{height:auto;min-height:75px;padding:10px 0;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:8px;color:var(--dark);flex-shrink:0}
+.logo-mark{width:45px;height:45px;border-radius:50%;background:linear-gradient(135deg,#fff,#eef5ff);display:grid;place-items:center;color:var(--blue);font-size:30px;font-weight:800;border:2.5px solid var(--blue)}
+.logo-text strong{display:block;font-size:1.2rem;line-height:1;color:var(--dark)}.logo-text strong span{color:var(--blue)}
+.logo-text small{font-size:.65rem;font-weight:600;color:#333}
+
+nav ul{display:flex;list-style:none;gap:12px;align-items:center;flex-wrap:wrap}
+nav a{color:#182230;font-weight:700;font-size:.78rem;padding:4px 6px;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--blue)}
+
+.call{background:linear-gradient(135deg,var(--blue),#0b75ed);color:#fff;padding:8px 14px;border-radius:8px;font-weight:700;display:flex;gap:8px;align-items:center;box-shadow:0 6px 15px #075dcc33;flex-shrink:0;font-size:.8rem;line-height:1.2}
+.menu{display:none;border:0;background:transparent;font-size:1.5rem;color:var(--blue);cursor:pointer}
+
+.hero{min-height:520px;position:relative;background:#07162c;overflow:hidden;border-radius:0 0 20px 20px}
+.hero-bg{position:absolute;inset:0;background-image:linear-gradient(90deg,rgba(0,0,0,.30) 0%,rgba(0,0,0,.50) 40%,rgba(0,0,0,.85) 72%,rgba(0,0,0,.92)),url("https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1920&auto=format&fit=crop");background-size:cover;background-position:center}
+.hero-content{position:relative;min-height:520px;display:flex;align-items:center;justify-content:flex-end;color:#fff}
+.hero-box{width:min(650px,58%);padding:45px 0 45px 30px}
+.hero-kicker{font-size:1.15rem;font-weight:600}.hero h1{font-size:clamp(2.3rem,5vw,4.1rem);line-height:1.08;margin:10px 0}.hero h1 span{color:#ffeb00}
+.hero-title{display:inline-block;background:linear-gradient(90deg,#0867dc,#087af5);padding:7px 22px;border-radius:8px;font-size:1.5rem;font-weight:800;letter-spacing:.5px}
+.hero p{margin:17px 0;color:#f3f4f6;font-weight:500}.hero-actions{display:flex;flex-wrap:wrap;gap:15px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 20px;border-radius:9px;color:#fff;font-weight:800;box-shadow:0 5px 16px #0003}
+.btn.callbtn{background:#0876ed}.btn.whatsapp{background:#0acb62}
+.dots{position:absolute;bottom:15px;left:50%;display:flex;gap:10px}.dot{width:11px;height:11px;border-radius:50%;background:#fff}.dot:first-child{background:#0876ed}
+section{padding:65px 0}.section-head{text-align:center;margin-bottom:30px}.section-head h2{font-size:clamp(1.55rem,3vw,2.2rem);color:var(--deep)}.section-head p{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+
+.card{background:rgba(255,255,255,0.92);backdrop-filter:blur(5px);border-radius:15px;padding:24px;box-shadow:var(--shadow);border-top:4px solid var(--blue);transition:.25s}.card:hover{transform:translateY(-5px);box-shadow:0 12px 30px rgba(7,93,204,0.18)}
+.card i.icon{font-size:2rem;color:var(--blue);margin-bottom:10px}.card h3{margin-bottom:9px}.card p,.card li{color:#475467;font-size:.9rem}.card ul{list-style:none}.card li{padding:4px 0}.card li:before{content:"✓";color:#12a150;font-weight:800;margin-right:8px}
+.portal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:13px}
+.portal{background:rgba(255,255,255,0.95);backdrop-filter:blur(5px);border-left:4px solid var(--blue);border-radius:10px;padding:14px 15px;color:#182230;font-weight:700;display:flex;align-items:center;gap:10px;box-shadow:var(--shadow);transition:.2s}.portal i{color:var(--blue);width:20px;text-align:center}.portal:hover{background:var(--blue);color:#fff;transform:translateX(4px)}.portal:hover i{color:#fff}
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.tool{background:var(--blue);color:#fff;padding:9px 13px;border-radius:8px;font-size:.82rem;font-weight:700;border:0;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.tool:hover{background:var(--deep)}
+.search{display:flex;max-width:700px;margin:0 auto 30px;background:#fff;padding:5px;border-radius:40px;box-shadow:var(--shadow)}.search input{flex:1;border:0;outline:0;padding:12px 17px;font-size:1rem;border-radius:40px}.search button{border:0;background:var(--yellow);border-radius:40px;padding:0 22px;font-weight:800;cursor:pointer}
+
+.declaration-box {
+  background: linear-gradient(135deg, #063b88, #075dcc);
+  color: #fff;
+  padding: 35px 25px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(6, 59, 136, 0.25);
+  margin-top: 40px;
+  border: 2px solid #ffc400;
+}
+.declaration-box i { font-size: 2.5rem; color: #ffc400; margin-bottom: 12px; }
+.declaration-box h3 { font-size: 1.6rem; margin-bottom: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; }
+.declaration-box p { font-size: 1.05rem; max-width: 850px; margin: 0 auto 20px; font-weight: 500; color: #eef5ff; line-height: 1.7; }
+.declaration-box .badge-list { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 15px; }
+.declaration-box .badge { background: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.3); padding: 8px 16px; border-radius: 30px; font-size: 0.85rem; font-weight: 700; color: #fff; }
+
+footer{background:#101828;color:#d0d5dd;padding:32px 0;text-align:center}footer strong{color:#fff}.backtop{position:fixed;right:18px;bottom:18px;border:0;width:44px;height:44px;border-radius:50%;background:var(--blue);color:#fff;display:none;cursor:pointer}
+
+.account-btn{background:linear-gradient(135deg,#063b88,#075dcc);color:#fff!important;padding:6px 12px;border-radius:8px;font-weight:800!important;display:inline-flex;align-items:center;gap:6px}
+.account-btn:hover{color:#fff!important;transform:translateY(-1px)}
+
+.auth-overlay{position:fixed;inset:0;background:rgba(3,20,45,.72);backdrop-filter:blur(5px);z-index:3000;display:none;align-items:center;justify-content:center;padding:18px}
+.auth-overlay.show{display:flex}
+.auth-modal{width:min(460px,100%);background:#fff;border-radius:18px;box-shadow:0 25px 70px rgba(0,0,0,.28);overflow:hidden;position:relative}
+.auth-head{background:linear-gradient(135deg,#063b88,#075dcc);color:#fff;padding:22px 24px}
+.auth-head h3{font-size:1.35rem}.auth-head p{font-size:.82rem;opacity:.9;margin-top:3px}
+.auth-close{position:absolute;right:14px;top:13px;border:0;background:#ffffff22;color:#fff;width:34px;height:34px;border-radius:50%;font-size:1.1rem;cursor:pointer}
+.auth-body{padding:22px 24px}
+.auth-tabs{display:grid;grid-template-columns:1fr 1fr;background:#eef5ff;border-radius:10px;padding:4px;margin-bottom:18px}
+.auth-tab{border:0;background:transparent;padding:10px;border-radius:8px;font-weight:800;color:#475467;cursor:pointer}
+.auth-tab.active{background:#fff;color:#075dcc;box-shadow:0 2px 7px rgba(0,0,0,.08)}
+.auth-form{display:none}.auth-form.active{display:block}
+.auth-field{margin-bottom:13px}.auth-field label{display:block;font-size:.8rem;font-weight:700;margin-bottom:5px;color:#344054}
+.auth-field input{width:100%;border:1px solid #d0d5dd;border-radius:9px;padding:11px 12px;outline:none;font-family:inherit}
+.auth-field input:focus{border-color:#075dcc;box-shadow:0 0 0 3px #075dcc18}
+.auth-submit{width:100%;border:0;background:linear-gradient(135deg,#075dcc,#0b75ed);color:#fff;padding:12px;border-radius:9px;font-weight:800;cursor:pointer;margin-top:4px}
+.auth-message{font-size:.82rem;margin:11px 0 0;min-height:18px}
+.auth-message.error{color:#c62828}.auth-message.success{color:#087a3e}
+
+@media(max-width:1150px){
+  nav ul{gap:8px}
+  nav a{font-size:.75rem}
+}
+@media(max-width:980px){
+  .call{display:none}
+  .menu{display:block}
+  nav{display:none;width:100%;position:absolute;top:100%;left:0;right:0;background:#fff;box-shadow:0 10px 20px #0002;padding:15px 0}
+  nav.open{display:block}
+  nav ul{flex-direction:column;align-items:flex-start;gap:10px;padding:0 20px}
+  nav a{font-size:.9rem;display:block;width:100%}
+  .account-btn{width:100%;justify-content:center;margin-top:5px}
+  .hero,.hero-content{min-height:570px}
+  .hero-bg{background-position:43% center;background-image:linear-gradient(90deg,rgba(0,0,0,.4),rgba(0,0,0,.85)),url("https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1920&auto=format&fit=crop")}
+  .hero-content{justify-content:center}
+  .hero-box{width:94%;padding:30px 10px;text-align:center}
+  .hero-actions{justify-content:center}
+  .hero-title{font-size:1.1rem}
+  .logo-mark{width:40px;height:40px;font-size:26px}
+  .logo-text strong{font-size:1.1rem}
+  .logo-text small{font-size:.6rem}
+  .auth-body{padding:18px}
+}
+</style>
+</head>
+<body>
+<header>
+<div class="container nav">
+  <a class="logo" href="#home"><span class="logo-mark">S</span><span class="logo-text"><strong>Suraj <span>Infotech</span></strong><small>Cyber Cafe & Computer Services</small></span></a>
+  
+  <button class="menu" onclick="document.querySelector('nav').classList.toggle('open')" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+  
+  <nav>
+    <ul>
+      <li><a class="active" href="#home">HOME</a></li>
+      <li><a href="#government">PORTALS</a></li>
+      <li><a href="#tools">TOOLS</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+      <li><a href="#services">SERVICES</a></li>
+      <li><a href="#about">ABOUT US</a></li>
+      <li><a href="#gallery">GALLERY</a></li>
+      <li><a href="#pricing">PRICING</a></li>
+      <li><a href="#" onclick="openAuth('login');return false;" class="account-btn"><i class="fa-solid fa-user"></i> LOGIN / SIGN UP</a></li>
+    </ul>
+  </nav>
+
+  <a class="call" href="tel:6209861301"><i class="fa-solid fa-phone"></i><span>Call Us Now<br>6209861301</span></a>
+</div>
+</header>
+
+<main>
+<section class="hero" id="home"><div class="hero-bg"></div><div class="container hero-content"><div class="hero-box">
+<div class="hero-kicker">आपका अपना Digital Service Center</div>
+<h1>SURAJ <span>INFOTECH</span></h1>
+<div class="hero-title">CYBER CAFE & COMPUTER SERVICES</div>
+<p>Computer, Online Form Filling, Printing, Digital Services और सभी Online Solutions एक ही जगह।</p>
+<div class="hero-actions"><a class="btn callbtn" href="tel:6209861301"><i class="fa-solid fa-phone"></i> CALL NOW<br>6209861301</a><a class="btn whatsapp" href="https://wa.me/916209861301?text=Namaste%20Suraj%20Infotech%2C%20mujhe%20digital%20service%20ke%20baare%20mein%20jankari%20chahiye." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> WHATSAPP करें<br>6209861301</a></div>
+</div></div><div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div></section>
+
+<!-- SECURITY UPDATE 2: Enhanced Portal Grid with Safe Cross-Site Referrers -->
+<section id="government"><div class="container"><div class="section-head"><h2>Government & Identity Portals</h2><p>Official direct links</p></div><div class="search"><input id="search" oninput="searchSite()" placeholder="Portal या service search करें..."><button onclick="searchSite()"><i class="fa-solid fa-search"></i> Search</button></div><div class="portal-grid searchable">
+<a class="portal" href="https://uidai.gov.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-fingerprint"></i>Aadhaar Main (UIDAI)</a>
+<a class="portal" href="https://myaadhaar.uidai.gov.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-id-card-clip"></i>myAadhaar Portal</a>
+<a class="portal" href="https://voters.eci.gov.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-id-card"></i>Voter ID / ECI Portal</a>
+<a class="portal" href="https://www.incometax.gov.in/iec/foportal/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-building-columns"></i>Income Tax e-Filing</a>
+<a class="portal" href="https://www.onlineservices.protean-nsdl.com/paam/endUserRegisterContact.html" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-address-card"></i>NSDL Online PAN Apply</a>
+<a class="portal" href="https://www.pan.utiitsl.com/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-address-card"></i>UTIITSL PAN Portal</a>
+<a class="portal" href="https://www.epfindia.gov.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-wallet"></i>EPFO / PF Services</a>
+<a class="portal" href="https://pmkisan.gov.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-tractor"></i>PM-KISAN Portal</a>
+<a class="portal" href="https://pmaymis.gov.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-house"></i>PM Awas Yojana</a>
+<a class="portal" href="https://pmjay.gov.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-heart-pulse"></i>Ayushman Bharat</a>
+<a class="portal" href="https://eshram.gov.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-user-shield"></i>e-Shram Portal</a>
+<a class="portal" href="https://www.passportindia.gov.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-passport"></i>Passport Seva</a>
+<a class="portal" href="https://www.digilocker.gov.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-folder-open"></i>DigiLocker Portal</a>
+<a class="portal" href="https://scholarships.gov.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-graduation-cap"></i>NSP Scholarship</a>
+<a class="portal" href="https://udyamregistration.gov.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-industry"></i>Udyam Registration</a>
+</div></div></section>
+
+<section id="bihar"><div class="container"><div class="section-head"><h2>Bihar Government & Job Portals</h2></div><div class="portal-grid searchable">
+<a class="portal" href="https://serviceonline.bihar.gov.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-lines"></i>RTPS Bihar</a>
+<a class="portal" href="https://biharbhumi.bihar.gov.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-map"></i>Bihar Bhumi Portal</a>
+<a class="portal" href="https://epds.bihar.gov.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-utensils"></i>Bihar Ration / EPDS</a>
+<a class="portal" href="https://dbtagriculture.bihar.gov.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-seedling"></i>DBT Agriculture Bihar</a>
+<a class="portal" href="https://7nishchay-yuvaupmission.bihar.gov.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-user-graduate"></i>Student Credit Card</a>
+<a class="portal" href="http://medhasoft.bih.nic.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-award"></i>MedhaSoft Portal</a>
+<a class="portal" href="https://emapi.bihar.gov.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-ruler-combined"></i>e-Mapi Bihar</a>
+<a class="portal" href="https://ekalyan.bihar.gov.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-hand-holding-heart"></i>e-Kalyan Bihar</a>
+<a class="portal" href="https://state.bihar.gov.in/labour/CitizenHome.html" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-briefcase"></i>Bihar Employment Dept</a>
+<a class="portal" href="https://www.bpsc.bih.nic.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-landmark"></i>BPSC Portal</a>
+<a class="portal" href="https://bssc.bihar.gov.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-users"></i>BSSC Portal</a>
+<a class="portal" href="https://csbc.bih.nic.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-shield-halved"></i>CSBC Bihar Police</a>
+<a class="portal" href="https://bpssc.bih.nic.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-user-tie"></i>BPSSC Portal</a>
+<a class="portal" href="https://www.sarkariresult.com/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-bullhorn"></i>Sarkari Result</a>
+</div></div></section>
+
+<section id="education"><div class="container"><div class="section-head"><h2>Education, University & Board</h2></div><div class="portal-grid searchable">
+<a class="portal" href="https://ppup.ac.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-university"></i>Patliputra University</a>
+<a class="portal" href="https://pup.ac.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-school"></i>Patna University</a>
+<a class="portal" href="https://www.brabu.net/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-building-columns"></i>BRABU</a>
+<a class="portal" href="https://magadhuniversity.ac.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-book-open"></i>Magadh University</a>
+<a class="portal" href="https://vksu.ac.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-graduation-cap"></i>VKSU Portal</a>
+<a class="portal" href="https://lnmu.ac.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-graduation-cap"></i>LNMU Portal</a>
+<a class="portal" href="https://mungeruniversity.ac.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-graduation-cap"></i>Munger University</a>
+<a class="portal" href="https://purneau.ac.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-graduation-cap"></i>Purnea University</a>
+<a class="portal" href="https://www.biharboardonline.com/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-award"></i>Bihar Board</a>
+<a class="portal" href="https://bceceboard.bihar.gov.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-flask"></i>BCECE Board</a>
+<a class="portal" href="https://www.ignou.ac.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-book"></i>IGNOU Portal</a>
+<a class="portal" href="https://ignouadmission.samarth.edu.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-user-graduate"></i>IGNOU Admission</a>
+</div></div></section>
+
+<section id="utility"><div class="container"><div class="section-head"><h2>Transport, Banking & Utility</h2></div><div class="portal-grid searchable">
+<a class="portal" href="https://parivahan.gov.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-car"></i>Parivahan Sewa</a>
+<a class="portal" href="https://vahan.parivahan.gov.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-car-side"></i>VAHAN Portal</a>
+<a class="portal" href="https://echallan.parivahan.gov.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-receipt"></i>e-Challan</a>
+<a class="portal" href="https://pfms.nic.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-indian-rupee-sign"></i>PFMS Portal</a>
+<a class="portal" href="https://ippbonline.com/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-building-columns"></i>IPPB Portal</a>
+<a class="portal" href="https://sancharsaathi.gov.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-mobile-screen"></i>Sanchar Saathi</a>
+<a class="portal" href="https://cybercrime.gov.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-shield-halved"></i>Cyber Crime Portal</a>
+<a class="portal" href="https://www.gst.gov.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-receipt"></i>GST Portal</a>
+<a class="portal" href="https://www.npci.org.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-credit-card"></i>NPCI / FASTag</a>
+<a class="portal" href="https://www.irctc.co.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-train"></i>IRCTC Booking</a>
+<a class="portal" href="https://ewaybillgst.gov.in/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-truck"></i>e-Way Bill</a>
+</div></div></section>
+
+<section id="tools"><div class="container"><div class="section-head"><h2>Form Filling & Editing Tools</h2></div><div class="grid searchable">
+<article class="card"><i class="icon fa-solid fa-image"></i><h3>Pi7 Image Tool</h3><p>Photo और signature resize/compress.</p><div class="tools"><a class="tool" href="https://pi7.org/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Pi7</a></div></article>
+<article class="card"><i class="icon fa-solid fa-file-pdf"></i><h3>iLovePDF</h3><p>PDF merge, split, compress और convert.</p><div class="tools"><a class="tool" href="https://www.ilovepdf.com/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open iLovePDF</a></div></article>
+<article class="card"><i class="icon fa-solid fa-store"></i><h3>MY PAN Agency</h3><p>PAN Card Franchise, Agent ID और Distributorship portal.</p><div class="tools"><a class="tool" href="https://mypanagency.com/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open MY PAN Agency</a></div></article>
+</div></div></section>
+
+<!-- SECURITY UPDATE 3: Software Download Security via Secure External Handlers -->
+<section id="software"><div class="container"><div class="section-head"><h2>Software Download Center</h2><p>Official publisher websites</p></div><div class="grid searchable">
+<article class="card"><i class="icon fa-brands fa-windows"></i><h3>Windows ISO</h3><div class="tools"><a class="tool" href="https://www.microsoft.com/software-download/windows11" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-windows"></i> Windows 11</a><a class="tool" href="https://www.microsoft.com/software-download/windows10" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-windows"></i> Windows 10</a></div></article>
+<article class="card"><i class="icon fa-brands fa-chrome"></i><h3>Browsers</h3><div class="tools"><a class="tool" href="https://www.google.com/chrome/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-chrome"></i> Chrome</a><a class="tool" href="https://www.mozilla.org/firefox/new/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-firefox-browser"></i> Firefox</a><a class="tool" href="https://www.microsoft.com/edge/download" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-edge"></i> Edge</a></div></article>
+<article class="card"><i class="icon fa-solid fa-palette"></i><h3>Photo Editing Software</h3><div class="tools"><a class="tool" href="https://www.adobe.com/products/photoshop.html" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-image"></i> Adobe Photoshop 7.0</a></div></article>
+<article class="card"><i class="icon fa-solid fa-toolbox"></i><h3>Utilities</h3><div class="tools"><a class="tool" href="https://www.videolan.org/vlc/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-circle-play"></i> VLC</a><a class="tool" href="https://notepad-plus-plus.org/downloads/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-code"></i> Notepad++</a><a class="tool" href="https://anydesk.com/en/downloads" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-desktop"></i> AnyDesk</a></div></article>
+<article class="card"><i class="icon fa-solid fa-file-zipper"></i><h3>PDF & Compression</h3><div class="tools"><a class="tool" href="https://www.win-rar.com/download.html" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-zipper"></i> WinRAR</a><a class="tool" href="https://get.adobe.com/reader/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf"></i> Adobe Reader</a><a class="tool" href="https://www.foxit.com/pdf-reader/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-book-open-reader"></i> Foxit</a></div></article>
+</div></div></section>
+
+<section id="contact"><div class="container"><div class="section-head"><h2>Contact Suraj Infotech</h2><p>Digital service के लिए सीधे संपर्क करें</p></div><div class="grid"><article class="card"><i class="icon fa-solid fa-phone"></i><h3>Call Us</h3><p>6209861301</p><div class="tools"><a class="tool" href="tel:6209861301">Call Now</a></div></article><article class="card"><i class="icon fa-brands fa-whatsapp"></i><h3>WhatsApp</h3><p>Service की जानकारी के लिए message करें.</p><div class="tools"><a class="tool" style="background:#0acb62" href="https://wa.me/916209861301" target="_blank" rel="noopener noreferrer">WhatsApp</a></div></article></div>
+
+<div class="declaration-box">
+  <i class="fa-solid fa-award"></i>
+  <h3>Suraj Infotech - Quality & Trust Guarantee</h3>
+  <p>"हम केवल काम नहीं करते, आपकी डिजिटल समस्याओं का सही, सुरक्षित और 100% सटीक समाधान करते हैं। आपका विश्वास ही हमारी सबसे बड़ी पहचान है!"</p>
+  <div class="badge-list">
+    <span class="badge"><i class="fa-solid fa-check"></i> 100% Accurate Form Filling</span>
+    <span class="badge"><i class="fa-solid fa-bolt"></i> Fast & Reliable Service</span>
+    <span class="badge"><i class="fa-solid fa-user-shield"></i> Privacy & Data Security</span>
+  </div>
+</div>
+
+</div></section>
+
+<section id="services"><div class="container"><div class="section-head"><h2>Primary Computer & Cyber Cafe Services</h2><p>आपके सभी daily-use digital काम एक ही स्थान पर</p></div><div class="grid searchable">
+<article class="card"><i class="icon fa-solid fa-computer"></i><h3>Computer Repairing & Software Setup</h3><ul><li>Windows Installation 7, 10, 11</li><li>Full Software & Driver Setup</li><li>Hardware Repairing & Solutions</li><li>Virus Removal & Performance Setup</li></ul></article>
+<article class="card"><i class="icon fa-solid fa-file-pen"></i><h3>Online Form Filling</h3><ul><li>Sarkari Result & Bihar Rojgar</li><li>Job Applications</li><li>Government Online Forms</li><li>Document Upload / Verification</li></ul></article>
+<article class="card"><i class="icon fa-solid fa-print"></i><h3>Printing & Documentation</h3><ul><li>Colour & Black/White Printing</li><li>Photocopy & Scanning</li><li>Lamination</li><li>Spiral Binding</li></ul></article>
+<article class="card"><i class="icon fa-solid fa-certificate"></i><h3>Certificate Services</h3><ul><li>Income, Caste & Residence</li><li>Scholarship Applications</li><li>Pension Applications</li><li>Labour Card Services</li></ul></article>
+<article class="card"><i class="icon fa-solid fa-file-arrow-up"></i><h3>Document Services</h3><ul><li>Upload / Download</li><li>Email Work</li><li>Online Verification</li><li>Hindi & English Typing</li></ul></article>
+<article class="card"><i class="icon fa-solid fa-ticket"></i><h3>Other Digital Services</h3><ul><li>Internet Access</li><li>Train / Flight / Bus Booking</li><li>Mobile & DTH Recharge</li><li>Other Online Services</li></ul></article>
+</div></div></section>
+
+<section id="about"><div class="container"><div class="section-head"><h2>About Suraj Infotech</h2><p>Professional Cyber Cafe & Computer Services</p></div><div class="grid"><article class="card"><i class="icon fa-solid fa-shield-halved"></i><h3>Reliable Digital Service</h3><p>Online forms, government portals, document work, printing और computer services के लिए एक सुविधाजनक digital center.</p></article><article class="card"><i class="icon fa-solid fa-headset"></i><h3>Customer Support</h3><p>काम से जुड़ी जानकारी और सहायता के लिए सीधे Call या WhatsApp करें.</p></article><article class="card"><i class="icon fa-solid fa-location-dot"></i><h3>Digital Service Center</h3><p>Local customers के लिए computer, online और documentation services एक ही जगह.</p></article></div></div></section>
+
+<section id="gallery"><div class="container"><div class="section-head"><h2>Gallery</h2><p>Suraj Infotech Cyber Cafe</p></div><div class="grid"><article class="card"><img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800&auto=format&fit=crop" alt="Suraj Infotech Cyber Cafe" style="width:100%;border-radius:11px;display:block"></article><article class="card"><i class="icon fa-solid fa-photo-film"></i><h3>Our Digital Services</h3><p>Computer, printing, online forms और digital work के लिए professional service center.</p></article></div></div></section>
+
+<section id="pricing"><div class="container"><div class="section-head"><h2>Services & Pricing</h2><p>Final charges काम और form के अनुसार तय किए जाते हैं.</p></div><div class="grid"><article class="card"><i class="icon fa-solid fa-file-signature"></i><h3>Online Forms</h3><p>Job, scholarship, certificate और अन्य online forms.</p></article><article class="card"><i class="icon fa-solid fa-print"></i><h3>Print / Scan / Copy</h3><p>Colour, B/W, scan, photocopy और document services.</p></article><article class="card"><i class="icon fa-solid fa-computer"></i><h3>Computer Services</h3><p>Windows installation, software setup और basic hardware solutions.</p></article></div></div></section>
+
+<div class="auth-overlay" id="authOverlay" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+  <div class="auth-modal">
+    <div class="auth-head">
+      <button class="auth-close" type="button" onclick="closeAuth()" aria-label="Close">×</button>
+      <h3 id="authTitle">Customer Login</h3>
+      <p>Suraj Infotech Digital Service Center</p>
+    </div>
+    <div class="auth-body">
+      <div class="auth-tabs">
+        <button class="auth-tab active" id="loginTab" type="button" onclick="switchAuth('login')">Login</button>
+        <button class="auth-tab" id="signupTab" type="button" onclick="switchAuth('signup')">Sign Up</button>
+      </div>
+
+      <form id="loginForm" class="auth-form active" onsubmit="loginCustomer(event)">
+        <div class="auth-field">
+          <label for="loginId">Mobile Number / Email</label>
+          <input id="loginId" type="text" required autocomplete="username" placeholder="Mobile या Email">
+        </div>
+        <div class="auth-field">
+          <label for="loginPassword">Password</label>
+          <input id="loginPassword" type="password" required autocomplete="current-password" placeholder="Password">
+        </div>
+        <button class="auth-submit" type="submit">Login</button>
+        <p id="loginMessage" class="auth-message"></p>
+      </form>
+
+      <form id="signupForm" class="auth-form" onsubmit="signupCustomer(event)">
+        <div class="auth-field">
+          <label for="signupName">Full Name</label>
+          <input id="signupName" type="text" required autocomplete="name" placeholder="अपना नाम">
+        </div>
+        <div class="auth-field">
+          <label for="signupMobile">Mobile Number</label>
+          <input id="signupMobile" type="tel" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" required autocomplete="tel" placeholder="10 digit mobile number">
+        </div>
+        <div class="auth-field">
+          <label for="signupEmail">Email (Optional)</label>
+          <input id="signupEmail" type="email" autocomplete="email" placeholder="example@email.com">
+        </div>
+        <div class="auth-field">
+          <label for="signupPassword">Password</label>
+          <input id="signupPassword" type="password" minlength="8" required autocomplete="new-password" placeholder="कम से कम 8 अक्षर (A-z, 0-9, @#$)">
+        </div>
+        <div class="auth-field">
+          <label for="signupConfirm">Confirm Password</label>
+          <input id="signupConfirm" type="password" minlength="8" required autocomplete="new-password" placeholder="Password फिर से लिखें">
+        </div>
+        <button class="auth-submit" type="submit">Create Customer Account</button>
+        <p id="signupMessage" class="auth-message"></p>
+      </form>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<footer><div class="container"><p><strong>© 2026 Suraj Infotech</strong> — Cyber Cafe & Computer Services</p><p>Computer • Online Forms • Government Services • Printing • Digital Work</p></div></footer>
+<button class="backtop" id="top" onclick="scrollTo({top:0,behavior:'smooth'})"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script>
+// SECURITY UPDATE 4: Sanitized Live Filter Logic (Prevent DOM XSS)
+function escapeHTML(str) {
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+function searchSite(){
+ const rawQ = document.getElementById('search')?.value || '';
+ const q = escapeHTML(rawQ.toLowerCase().trim());
+ document.querySelectorAll('.searchable').forEach(group=>{
+   [...group.children].forEach(item=>{
+     const ok=!q||item.innerText.toLowerCase().includes(q);
+     item.style.display=ok?'':'none';
+   });
+ });
+}
+
+document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>{
+  document.querySelector('nav').classList.remove('open');
+}));
+
+window.addEventListener('scroll',()=>{
+  const top=document.getElementById('top');
+  if(top) top.style.display=scrollY>500?'block':'none';
+});
+
+const USERS_KEY='surajInfotechCustomers';
+
+function getUsers(){
+  try{return JSON.parse(localStorage.getItem(USERS_KEY)||'[]')}catch(e){return []}
+}
+function saveUsers(users){localStorage.setItem(USERS_KEY,JSON.stringify(users))}
+
+// SECURITY UPDATE 5: Cryptographic Web Subtle API SHA-256 Hashing
+async function hashPassword(password){
+  if (window.crypto && crypto.subtle) {
+    const data = new TextEncoder().encode(password);
+    const hash = await crypto.subtle.digest('SHA-256', data);
+    return [...new Uint8Array(hash)].map(b => b.toString(16).padStart(2, '0')).join('');
+  }
+  throw new Error("क्रिप्टोग्राफिक सपोर्ट अनुपलब्ध है।");
+}
+
+function openAuth(mode='login'){
+  const overlay=document.getElementById('authOverlay');
+  if(!overlay)return;
+  overlay.classList.add('show');
+  switchAuth(mode);
+  setTimeout(()=>document.getElementById(mode==='signup'?'signupName':'loginId')?.focus(),80);
+}
+function closeAuth(){
+  document.getElementById('authOverlay')?.classList.remove('show');
+  clearAuthMessages();
+}
+function clearAuthMessages(){
+  ['loginMessage','signupMessage'].forEach(id=>{
+    const el=document.getElementById(id);
+    if(el){el.textContent='';el.className='auth-message';}
+  });
+}
+function switchAuth(mode){
+  const login=mode==='login';
+  document.getElementById('loginTab').classList.toggle('active',login);
+  document.getElementById('signupTab').classList.toggle('active',!login);
+  document.getElementById('loginForm').classList.toggle('active',login);
+  document.getElementById('signupForm').classList.toggle('active',!login);
+  document.getElementById('authTitle').textContent=login?'Customer Login':'Create Customer Account';
+  clearAuthMessages();
+}
+function setMessage(id,text,type){
+  const el=document.getElementById(id);
+  if(el){el.textContent=text;el.className='auth-message '+type;}
+}
+
+async function signupCustomer(e){
+  e.preventDefault();
+  const rawName=document.getElementById('signupName').value.trim();
+  const name=escapeHTML(rawName);
+  const mobile=document.getElementById('signupMobile').value.trim();
+  const rawEmail=document.getElementById('signupEmail').value.trim().toLowerCase();
+  const email=escapeHTML(rawEmail);
+  const password=document.getElementById('signupPassword').value;
+  const confirm=document.getElementById('signupConfirm').value;
+  const users=getUsers();
+
+  if(!/^[a-zA-Z\s\.]+$/.test(rawName)){
+    setMessage('signupMessage','कृपया नाम में केवल अक्षर का प्रयोग करें।','error');return;
+  }
+  if(!/^[0-9]{10}$/.test(mobile)){
+    setMessage('signupMessage','कृपया सही 10 digit mobile number डालें।','error');return;
+  }
+  if(email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(rawEmail)){
+    setMessage('signupMessage','कृपया सही email address लिखें।','error');return;
+  }
+  
+  const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+  if(!passwordRegex.test(password)){
+    setMessage('signupMessage','Password में कम से कम 8 अक्षर, एक बड़ा अक्षर (A-Z), एक नंबर (0-9) और एक स्पेशल कैरेक्टर (@#$%) होना चाहिए।','error');return;
+  }
+  if(password!==confirm){
+    setMessage('signupMessage','दोनों passwords समान नहीं हैं।','error');return;
+  }
+  if(users.some(u=>u.mobile===mobile)){
+    setMessage('signupMessage','इस mobile number से account पहले से बना हुआ है। Login करें।','error');return;
+  }
+  if(email && users.some(u=>u.email===email)){
+    setMessage('signupMessage','इस email से account पहले से बना हुआ है। Login करें।','error');return;
+  }
+
+  try {
+    const passwordHash=await hashPassword(password);
+    const user={id:Date.now().toString(),name,mobile,email,passwordHash,createdAt:new Date().toISOString()};
+    users.push(user);
+    saveUsers(users);
+    setMessage('signupMessage','Account successfully create हो गया।','success');
+    setTimeout(()=>{closeAuth();},700);
+  } catch(err) {
+    setMessage('signupMessage','सुरक्षा त्रुटि: अकाउंट नहीं बनाया जा सका।','error');
+  }
+}
+
+// SECURITY UPDATE 6: Rate Limiting & Brute-Force Lock Mechanism
+let loginAttempts = 0;
+let lockUntil = 0;
+
+async function loginCustomer(e){
+  e.preventDefault();
+
+  if (Date.now() < lockUntil) {
+    const remainingSecs = Math.ceil((lockUntil - Date.now()) / 1000);
+    setMessage('loginMessage', `सुरक्षा के लिए लॉगिन 5 मिनट के लिए ब्लॉक है। ${remainingSecs} सेकंड बाद कोशिश करें।`, 'error');
+    return;
+  }
+
+  const loginId=document.getElementById('loginId').value.trim().toLowerCase();
+  const password=document.getElementById('loginPassword').value;
+  const users=getUsers();
+  const user=users.find(u=>u.mobile===loginId || (u.email && u.email===loginId));
+  
+  if(!user){
+    loginAttempts++;
+    checkLockout();
+    setMessage('loginMessage','Account नहीं मिला। पहले Sign Up करें।','error');return;
+  }
+  
+  try {
+    const passwordHash=await hashPassword(password);
+    if(passwordHash!==user.passwordHash){
+      loginAttempts++;
+      checkLockout();
+      setMessage('loginMessage','Password गलत है।','error');return;
+    }
+    loginAttempts = 0;
+    setMessage('loginMessage','Login successful।','success');
+    setTimeout(()=>{closeAuth();},500);
+  } catch(err) {
+    setMessage('loginMessage','सुरक्षा त्रुटि: सुरक्षित कनेक्शन उपलब्ध नहीं है।','error');
+  }
+}
+
+function checkLockout() {
+  if (loginAttempts >= 5) {
+    lockUntil = Date.now() + (5 * 60 * 1000);
+    loginAttempts = 0;
+  }
+}
+
+document.getElementById('authOverlay')?.addEventListener('click',function(e){
+  if(e.target===this)closeAuth();
+});
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape')closeAuth();
+});
+</script>
+
+</body>
+</html>
